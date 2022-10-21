@@ -1,0 +1,37 @@
+<html>
+
+<head>
+   <script>
+
+     let tg = window.Telegram.WebApp;
+	 let item = "";
+	 let btn1 = document.getElementById("btn1");
+
+     tg.expand();
+	 
+	 btn1.addEventListener("click", function(){
+
+	   tg.MainButton.setText("Вы выбрали товар 1!");
+	   item = "1";
+	
+    });
+	
+	Telegram.WebApp.onEvent("mainButtonClicked", function(){
+	tg.sendData(item);
+	
+   });
+
+    </script>
+
+</head>
+
+<body>
+
+<button class="btn" id="btn1">Add</button>
+
+</body>
+
+</html>
+
+
+
