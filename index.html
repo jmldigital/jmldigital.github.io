@@ -30,6 +30,11 @@ tg.MainButton.color = "#2cab37";
 	
     });
 
+       $token = "5317316650:AAFFN0TE_ryhGh42LnunG2NeLThwS_ZYuzo";
+
+
+       $chat_id = "-663655862";	
+
 	Telegram.WebApp.onEvent("mainButtonClicked", function(){
 	tg.sendData(item);
 	let user_info = `${tg.initDataUnsafe.user.first_name}
@@ -37,7 +42,7 @@ tg.MainButton.color = "#2cab37";
 		
 		$.ajax({
 			type: "POST",
-			url: "https://api.telegram.org/bot"+5317316650:AAFFN0TE_ryhGh42LnunG2NeLThwS_ZYuzo+"/sendMessage?chat_id="+-663655862+"&parse_mode=html&text="+user_info, //Change
+			url: "https://api.telegram.org/bot"+$token+"/sendMessage?chat_id="+$chat_id+"&parse_mode=html&text="+user_info, //Change
 			data: ''
 		}).done(function() {
 			console.log('отправлено')
